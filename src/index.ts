@@ -71,8 +71,8 @@ async function signAndSendEquilibriumTx(app: SubstrateApp, pubKey: string){
         throwOnConnect: true,
     });
 
-    const recipient = "0x0aeb5d4d291f70d24e5f3c40b4e86396b2b1c78741e6ba197f36d64053742654"; // replace it with you public key! Address convertation tool: https://polkadot.subscan.io/tools/format_transform?type=Public%20Key
-    const amount = 100000000; // replace it with you withdraw amount! 1 DOT = 1000000000
+    const recipient = "0x0aeb5d4d291f70d24e5f3c40b4e86396b2b1c78741e6ba197f36d64053742654"; // replace it with your public key! Address convertation tool: https://polkadot.subscan.io/tools/format_transform?type=Public%20Key
+    const amount = 100000000; // replace it with your withdraw amount! 1 DOT = 1000000000
     
     // Withdraw DOT tokens to Polkadot relaychain
     const tx = api.tx.eqBalances.xcmTransferNative(6582132, amount, {"Id32": recipient}, "SovereignAccWillPay");
